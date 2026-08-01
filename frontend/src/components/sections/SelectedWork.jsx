@@ -26,9 +26,11 @@ const WorkVisual = ({ visual }) => {
   if (visual === "logo-tesla") {
     return (
       <div className={container} style={style}>
-        <span className="font-display text-ink" style={{ fontSize: "clamp(20px,2.4vw,30px)", letterSpacing: "0.32em", fontWeight: 600 }}>
-          TESLA
-        </span>
+        <img
+          src="/images/tesla-logo.jpg"
+          alt="Tesla"
+          className="w-1/2 h-1/2 object-contain mix-blend-multiply"
+        />
       </div>
     );
   }
