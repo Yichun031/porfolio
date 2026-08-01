@@ -198,4 +198,39 @@ export const Note = ({ className }) => (
   </Draw>
 );
 
+// Cute cartoon cake + Guerlain-style perfume behind (PuXuan) — simple lines
+export const CakePerfume = ({ className }) => (
+  <Draw className={className} viewBox="0 0 130 122">
+    {/* ── Perfume bottle (behind) ── */}
+    {/* body + honeycomb dome shoulder */}
+    <P d="M74 108 V58 C74 46 82 37 92 35 C102 37 110 46 110 58 V108 Z" sw={2} />
+    {/* liquid hint */}
+    <P d="M74 90 C86 94 98 94 110 90" sw={1.6} />
+    {/* honeycomb cells */}
+    <P d="M84 45 L87 43 L90 45 L90 49 L87 51 L84 49 Z" sw={1.4} />
+    <P d="M94 47 L97 45 L100 47 L100 51 L97 53 L94 51 Z" sw={1.4} />
+    {/* neck + cap */}
+    <P d="M86 35 V29 M98 35 V29" sw={1.8} />
+    <P d="M85 29 H99 V19 C99 14 96 12 92 12 C88 12 85 14 85 19 Z" sw={2} fill="var(--mustard)" />
+    {/* label */}
+    <P d="M80 66 H104 V92 H80 Z" sw={1.6} />
+    <P d="M92 79 C93 79 94 80 94 81 C94 82 93 83 92 83 C91 83 90 82 90 81 C90 80 91 79 92 79 Z" sw={1.2} fill="var(--pink)" />
+
+    {/* ── Pedestal block ── */}
+    <P d="M20 92 H64 V116 H20 Z" sw={1.8} fill="var(--blue)" />
+    <P d="M20 92 L28 86 H72 L64 92 M64 92 L72 86 V108" sw={1.4} />
+
+    {/* ── Cake dome (front, white to mask) ── */}
+    <P d="M24 92 C22 74 31 61 44 61 C57 61 66 74 64 92 Z" sw={2.2} fill="var(--white)" />
+    {/* crumbly base line */}
+    <P d="M27 88 q4 5 8 0 q4 5 8 0 q4 5 8 0 q4 5 6 0" sw={1.3} />
+    {/* saucer */}
+    <P d="M33 60 C33 56 55 56 55 60 C55 63 33 63 33 60 Z" sw={1.6} fill="var(--pink-soft)" />
+    {/* cream swirl */}
+    <P d="M38 59 C39 50 43 47 44 44 C45 47 49 50 50 59" sw={1.8} fill="var(--white)" />
+    {/* rose petal on top */}
+    <P d="M44 45 C40 42 40 37 44 35 C48 37 48 42 44 45 Z" sw={1.6} fill="var(--pink-soft)" />
+  </Draw>
+);
+
 export const Arrow = CurvedArrow;

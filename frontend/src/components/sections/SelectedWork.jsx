@@ -1,7 +1,7 @@
 import React from "react";
 import { content } from "../../data/content";
 import { Reveal } from "../primitives";
-import { IceCream, Cake } from "../Doodles";
+import { IceCream, CakePerfume } from "../Doodles";
 
 const WorkVisual = ({ visual }) => {
   // Identical soft-square, light-grey container for BOTH illustrations and logos
@@ -19,7 +19,7 @@ const WorkVisual = ({ visual }) => {
   if (visual === "illustration-cake") {
     return (
       <div className={container} style={style}>
-        <Cake className="w-2/5" fill="var(--mustard)" />
+        <CakePerfume className="w-3/5" />
       </div>
     );
   }
@@ -36,10 +36,11 @@ const WorkVisual = ({ visual }) => {
   }
   return (
     <div className={container} style={style}>
-      <span className="font-display text-ink flex items-center gap-1" style={{ fontSize: "clamp(20px,2.4vw,30px)", letterSpacing: "0.08em", fontWeight: 700 }}>
-        <span className="inline-block h-4 w-6" style={{ background: "linear-gradient(135deg,#ED4D9E 0 50%, #14120F 50% 100%)" }} />
-        HSBC
-      </span>
+      <img
+        src="/images/hsbc-logo.jpg"
+        alt="HSBC"
+        className="w-3/5 h-3/5 object-contain mix-blend-multiply"
+      />
     </div>
   );
 };
