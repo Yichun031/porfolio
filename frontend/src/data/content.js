@@ -85,9 +85,9 @@ export const content = {
           {
             heading: "A) Instagram Product Content",
             slots: [
-              { label: "Gelato product", ratio: "9/16" },
-              { label: "Coffee & drinks", ratio: "9/16" },
-              { label: "Store / seasonal", ratio: "9/16" },
+              { label: "Gelato product", ratio: "9/16", src: "/images/ig-1.webp" },
+              { label: "Coffee & drinks", ratio: "9/16", src: "/images/ig-2.webp" },
+              { label: "Store / seasonal", ratio: "9/16", src: "/images/ig-3.webp" },
             ],
             caption: "Product, drinks, store and seasonal content across Instagram feed and Reels.",
           },
