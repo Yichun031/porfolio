@@ -76,7 +76,7 @@ export const content = {
     subtitle: "Social Media Marketing & Creator Operations",
     intro:
       "Managed social media content across Instagram, TikTok and Rednote, creator and UGC collaborations, website updates and promotional poster design.",
-    hero: { label: "Morelli's hero image", ratio: "16/9" },
+    hero: { label: "Morelli's hero image", ratio: "16/9", src: "/images/morellis-hero.png" },
     sections: [
       {
         num: "01",
