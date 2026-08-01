@@ -93,14 +93,13 @@ export const ImageSlot = ({ label, ratio = "4/5", src, className = "" }) => {
   const showImg = src && !failed;
   return (
     <div className={`hover-scale ${className}`}>
-      <div className="img-slot rounded-[2px]" style={{ paddingTop: showImg ? 0 : ratioToPadding(ratio) }}>
+      <div className="img-slot rounded-[2px]" style={{ paddingTop: ratioToPadding(ratio) }}>
         {showImg ? (
           <img
             src={src}
             alt={label}
             onError={() => setFailed(true)}
-            className="block w-full h-auto"
-            style={{ aspectRatio: ratio.replace("/", " / ") }}
+            className="absolute inset-0 w-full h-full object-cover"
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center p-4 text-center">

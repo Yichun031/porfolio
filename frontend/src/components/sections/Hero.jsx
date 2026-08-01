@@ -73,7 +73,7 @@ export const Hero = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="w-full max-w-[280px] lg:ml-auto"
             >
-              <ImageSlot label="Optional portrait" ratio="4/5" />
+              <ImageSlot label="Yichun Hou" ratio="4/5" src="/images/yichun-portrait.webp" />
             </motion.div>
             <motion.div
               initial={reduce ? false : { opacity: 0 }}
