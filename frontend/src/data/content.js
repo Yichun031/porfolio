@@ -147,13 +147,18 @@ export const content = {
           {
             heading: "C) Featured Creator Collaboration",
             slots: [
-              { label: "Creator profile", ratio: "9/16" },
-              { label: "Video still", ratio: "9/16" },
-              { label: "Brand Reel", ratio: "9/16" },
-              { label: "Results screen", ratio: "9/16" },
+              { label: "Creator profile", ratio: "9/16", src: "/images/feat-z.webp" },
+              { label: "Video still", ratio: "9/16", src: "/images/feat-w.webp" },
+              { label: "Brand Reel", ratio: "9/16", src: "/images/feat-y.webp" },
+              { label: "Results screen", ratio: "9/16", src: "/images/feat-x.webp" },
             ],
-            caption: "Sourced and coordinated a content collaboration with a TikTok creator with over 180,000 followers.",
-            metrics: ["6,829 views", "4,523 accounts reached", "6.3% like rate", "19 saves", "60 profile visits", "8 follows"],
+            caption: "Identified and approached a TikTok creator with over 180K followers, secured permission and repurposed his organic Morelli's content for the brand's Instagram Reels, generating 6,829 views, reaching 4,523 accounts and achieving a 6.3% like rate.",
+            note: "creator content, brand amplification",
+            resultsBox: {
+              main: "6.3%",
+              mainLabel: "Like rate",
+              supporting: ["6,829 Views", "4,523 Accounts Reached", "297 Likes"],
+            },
           },
           {
             heading: "D) Artist Collaboration",
