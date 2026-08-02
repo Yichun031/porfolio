@@ -73,6 +73,7 @@ export const CaseMorellis = () => {
           <CaseHeader id="morellis" num={d.num} title={d.title} subtitle={d.subtitle} intro={d.intro} />
         </div>
 
+        <div className="max-w-[1120px] mx-auto">
         <Reveal>
           <div className="mb-20">
             <ImageSlot label={d.hero.label} ratio={d.hero.ratio} src={d.hero.src} />
@@ -119,6 +120,7 @@ export const CaseMorellis = () => {
         <MaskLine className="font-hand text-pink" >
           <span style={{ fontSize: "clamp(20px,2.4vw,32px)" }}>{d.closing}</span>
         </MaskLine>
+        </div>
       </div>
     </section>
   );

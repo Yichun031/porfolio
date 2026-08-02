@@ -187,10 +187,10 @@ export const content = {
       right: {
         heading: "Promotional Poster Design",
         slots: [
-          { label: "Poster 1", ratio: "4/5" },
-          { label: "Poster 2", ratio: "4/5" },
-          { label: "Poster 3", ratio: "4/5" },
-          { label: "Poster 4", ratio: "4/5" },
+          { label: "Poster 1", ratio: "4/5", src: "/images/poster-d.webp" },
+          { label: "Poster 2", ratio: "4/5", src: "/images/poster-c.webp" },
+          { label: "Poster 3", ratio: "4/5", src: "/images/poster-b.png" },
+          { label: "Poster 4", ratio: "4/5", src: "/images/poster-a.webp" },
         ],
         caption: "Designed promotional posters and supporting visual assets in line with the brand's visual identity.",
       },
