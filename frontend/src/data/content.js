@@ -134,12 +134,12 @@ export const content = {
           {
             heading: "B) UGC & Micro-Creator Collaborations",
             slots: [
-              { label: "Instagram creator in-store 1", ratio: "9/16" },
-              { label: "Instagram creator in-store 2", ratio: "9/16" },
-              { label: "Instagram creator in-store 3", ratio: "9/16" },
-              { label: "Rednote creator visit 1", ratio: "9/16" },
-              { label: "Rednote creator visit 2", ratio: "9/16" },
-              { label: "Rednote creator visit 3", ratio: "9/16" },
+              { label: "Instagram creator in-store 1", ratio: "9/16", src: "/images/cc-1.webp" },
+              { label: "Instagram creator in-store 2", ratio: "9/16", src: "/images/cc-2.webp" },
+              { label: "Instagram creator in-store 3", ratio: "9/16", src: "/images/cc-3.webp" },
+              { label: "Rednote creator visit 1", ratio: "9/16", src: "/images/cc-4.webp" },
+              { label: "Rednote creator visit 2", ratio: "9/16", src: "/images/cc-5.webp" },
+              { label: "Rednote creator visit 3", ratio: "9/16", src: "/images/cc-6.webp" },
             ],
             caption: "Coordinated collaborations with Instagram and Rednote creators, and reshared their content through the brand's own channels.",
             note: "two platforms, two audiences",
