@@ -94,20 +94,24 @@ export const content = {
           {
             heading: "B) Reactive Content — Channel 4's “Four in a Bed”",
             slots: [
-              { label: "Show guests at the store", ratio: "9/16" },
-              { label: "Search tag", ratio: "9/16" },
-              { label: "Published Reel", ratio: "9/16" },
+              { label: "Show guests at the store", ratio: "9/16", src: "/images/fitb-1.webp" },
+              { label: "Reel insights", ratio: "9/16", src: "/images/fitb-3.webp" },
+              { label: "Published Reel", ratio: "9/16", src: "/images/fitb-2.webp" },
             ],
             caption: "Created timely social content around Morelli's appearance on Channel 4's Four in a Bed.",
             note: "reactive, not planned",
-            metrics: ["2,000 views", "70 likes", "14 shares"],
+            resultsBox: {
+              main: "55.6%",
+              mainLabel: "Non-follower audience",
+              supporting: ["2,098 Views", "1,533 Accounts Reached"],
+            },
           },
           {
             heading: "C) TikTok — Entertaining Short-form Video",
             slots: [
-              { label: "Video cover", ratio: "9/16" },
-              { label: "Behind the scenes", ratio: "9/16" },
-              { label: "Video still", ratio: "9/16" },
+              { label: "Video cover", ratio: "9/16", src: "/images/tt-1.webp" },
+              { label: "Profile grid", ratio: "9/16", src: "/images/tt-2.webp" },
+              { label: "Video still", ratio: "9/16", src: "/images/tt-3.webp" },
             ],
             caption: "Produced entertaining short-form videos designed for TikTok's informal and fast-paced content style.",
           },

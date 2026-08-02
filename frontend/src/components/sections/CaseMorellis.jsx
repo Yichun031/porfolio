@@ -34,6 +34,32 @@ const Group = ({ group }) => (
         <MetricsStrip metrics={group.metrics} />
       </div>
     )}
+    {group.resultsBox && (
+      <div className="mt-8">
+        <div
+          className="inline-block px-10 py-10 md:px-16 md:py-12 text-center"
+          style={{ border: "2px dotted var(--pink)", borderRadius: 2 }}
+        >
+          <div className="section-number leading-none" style={{ fontSize: "clamp(56px,9vw,120px)" }}>
+            {group.resultsBox.main}
+          </div>
+          <div
+            className="font-display uppercase text-ink mt-3"
+            style={{ fontSize: "clamp(12px,1.3vw,15px)", letterSpacing: "0.18em" }}
+          >
+            {group.resultsBox.mainLabel}
+          </div>
+          <div className="flex items-center justify-center gap-4 mt-8">
+            {group.resultsBox.supporting.map((s, i) => (
+              <React.Fragment key={s}>
+                {i > 0 && <span className="inline-block rounded-full" style={{ width: 6, height: 6, backgroundColor: "var(--pink)" }} aria-hidden />}
+                <span className="font-display text-ink-soft" style={{ fontSize: "clamp(14px,1.4vw,18px)" }}>{s}</span>
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      </div>
+    )}
   </div>
 );
 
