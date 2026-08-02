@@ -275,9 +275,9 @@ export const content = {
     subtitle: "MarCom & Social Media Campaigns",
     intro: "Supported three hotel campaigns from content preparation and brand review to multi-channel launch, KOL visits and coverage tracking.",
     keyVisuals: [
-      { label: "PuXuan × Guerlain 'Fang Yu' Afternoon Tea", ratio: "4/5" },
-      { label: "'Xuan Yue' Mid-Autumn Gift Box", ratio: "4/5" },
-      { label: "2022 Christmas Season", ratio: "4/5" },
+      { label: "PuXuan × Guerlain 'Fang Yu' Afternoon Tea", ratio: "4/5", src: "/images/pxk-c.png" },
+      { label: "'Xuan Yue' Mid-Autumn Gift Box", ratio: "4/5", src: "/images/pxk-b.png" },
+      { label: "2022 Christmas Season", ratio: "4/5", src: "/images/pxk-a.png" },
     ],
     workflow: {
       heading: "From Product to Coverage",
@@ -295,9 +295,9 @@ export const content = {
     campaigns: {
       heading: "Selected Campaigns",
       items: [
-        { num: "01", title: "PuXuan × Guerlain “Fang Yu”", tag: "Brand Collaboration Campaign", meta: "27 Jul – 30 Oct 2022 · Lobby Lounge", ratio: "4/5", label: "PuXuan × Guerlain 'Fang Yu'", desc: "An afternoon tea inspired by Guerlain's Aqua Allegoria fragrance collection, presented with Alphonse Mucha's Art Nouveau visual language.", focus: ["External luxury brand guidelines", "Bilingual campaign content", "Product photography and co-branded assets", "Two-way review and coordinated launch", "KOL and media activation"], note: "Supported a luxury brand collaboration requiring strict brand alignment, multi-party review and coordinated launch communication." },
-        { num: "02", title: "“Xuan Yue” Mid-Autumn Gift Box", tag: "Seasonal Product & Gifting Campaign", meta: "Aug 2022 · Eight flavours", ratio: "4/5", label: "'Xuan Yue' Mid-Autumn Gift Box", desc: "A Mid-Autumn mooncake gift box of eight flavours, positioned for both consumer and corporate gifting.", focus: ["Product information and copy for eight varieties", "Gift-box packaging and visual materials", "Festival campaign scheduling", "B2B gifting communication"], note: "Supported a time-sensitive seasonal campaign covering product storytelling, gift-box presentation and gifting communication." },
-        { num: "03", title: "2022 Christmas Season", tag: "Multi-product Seasonal Campaign", meta: "Dec 2022", ratio: "4/5", label: "2022 Christmas Season", desc: "Weekend brunch, Christmas Eve tasting dinner, Christmas afternoon tea and a sweet set, promoted simultaneously.", focus: ["Content across multiple products", "Clear messaging across venues, price points and time slots", "Christmas visual and social content", "Multi-product launch scheduling"], note: "Supported a multi-product campaign requiring clear messaging across different venues, price points and dining occasions." },
+        { num: "01", title: "PuXuan × Guerlain “Fang Yu”", tag: "Brand Collaboration Campaign", meta: "27 Jul – 30 Oct 2022 · Lobby Lounge", ratio: "4/5", label: "PuXuan × Guerlain 'Fang Yu'", src: "/images/pxk-c.png", desc: "An afternoon tea inspired by Guerlain's Aqua Allegoria fragrance collection, presented with Alphonse Mucha's Art Nouveau visual language.", focus: ["External luxury brand guidelines", "Bilingual campaign content", "Product photography and co-branded assets", "Two-way review and coordinated launch", "KOL and media activation"], note: "Supported a luxury brand collaboration requiring strict brand alignment, multi-party review and coordinated launch communication." },
+        { num: "02", title: "“Xuan Yue” Mid-Autumn Gift Box", tag: "Seasonal Product & Gifting Campaign", meta: "Aug 2022 · Eight flavours", ratio: "4/5", label: "'Xuan Yue' Mid-Autumn Gift Box", src: "/images/pxk-b.png", desc: "A Mid-Autumn mooncake gift box of eight flavours, positioned for both consumer and corporate gifting.", focus: ["Product information and copy for eight varieties", "Gift-box packaging and visual materials", "Festival campaign scheduling", "B2B gifting communication"], note: "Supported a time-sensitive seasonal campaign covering product storytelling, gift-box presentation and gifting communication." },
+        { num: "03", title: "2022 Christmas Season", tag: "Multi-product Seasonal Campaign", meta: "Dec 2022", ratio: "4/5", label: "2022 Christmas Season", src: "/images/pxk-a.png", desc: "Weekend brunch, Christmas Eve tasting dinner, Christmas afternoon tea and a sweet set, promoted simultaneously.", focus: ["Content across multiple products", "Clear messaging across venues, price points and time slots", "Christmas visual and social content", "Multi-product launch scheduling"], note: "Supported a multi-product campaign requiring clear messaging across different venues, price points and dining occasions." },
       ],
     },
     coverage: {

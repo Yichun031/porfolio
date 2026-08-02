@@ -42,7 +42,12 @@ export const CasePuXuan = () => {
         <Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
             {d.keyVisuals.map((s, i) => (
-              <ImageSlot key={i} label={s.label} ratio={s.ratio} src={s.src} />
+              <div key={i}>
+                <ImageSlot label={s.label} ratio={s.ratio} src={s.src} />
+                <p className="font-hand text-pink mt-3 text-center" style={{ fontSize: "clamp(15px,1.4vw,19px)", lineHeight: 1.25 }}>
+                  {s.label}
+                </p>
+              </div>
             ))}
           </div>
         </Reveal>
