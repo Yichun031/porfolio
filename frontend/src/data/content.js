@@ -304,7 +304,7 @@ export const content = {
       heading: "KOL & Media Coverage",
       flow: ["Targeting", "Outreach", "Visit", "Publication", "Tracking"],
       items: [
-        { outlet: "Jiemian News", headline: "PuXuan Hotel and Guerlain launch “Fang Yu” afternoon tea", date: "", url: "https://www.jiemian.com/article/7861293.html", ratio: "16/9" },
+        { outlet: "Jiemian News", headline: "PuXuan Hotel and Guerlain launch “Fang Yu” afternoon tea", date: "", url: "https://www.jiemian.com/article/7861293.html", ratio: "16/9", src: "/images/coverage-1.png" },
         { outlet: "MICE China", headline: "PuXuan Hotel partners with Guerlain on “Fang Yu” afternoon tea", date: "27 Jul 2022", url: "https://www.micecn.com/articles/show/7849", ratio: "16/9" },
         { outlet: "Sohu", headline: "Beijing hotel co-branded afternoon tea round-up", date: "15 Aug 2022", url: "https://www.sohu.com/a/576882183_121119040", ratio: "16/9" },
         { outlet: "Sina", headline: "“Fang Yu” afternoon tea", date: "5 Aug 2022", url: "https://www.sina.cn/news/detail/4799171627849226.html", ratio: "16/9" },
