@@ -14,33 +14,33 @@ const gridCols = (n) => {
 const Group = ({ group }) => (
   <div className="mb-16">
     <Reveal>
-      <h4 className="font-display text-ink mb-5" style={{ fontSize: "clamp(15px,1.6vw,20px)", fontWeight: 600 }}>
+      <h4 className="font-display text-ink mb-5 text-center" style={{ fontSize: "clamp(15px,1.6vw,20px)", fontWeight: 600 }}>
         {group.heading}
       </h4>
     </Reveal>
     <Reveal delay={0.05}>
-      <div className={`grid ${gridCols(group.slots.length)} gap-4 mb-5 max-w-[860px]`}>
+      <div className={`grid ${gridCols(group.slots.length)} gap-4 mb-5 max-w-[860px] mx-auto`}>
         {group.slots.map((s, i) => (
           <ImageSlot key={i} label={s.label} ratio={s.ratio} src={s.src} />
         ))}
       </div>
     </Reveal>
-    <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-      <p className="text-ink-soft max-w-2xl" style={{ fontSize: "clamp(14px,1.4vw,17px)" }}>{group.caption}</p>
+    <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-center">
+      <p className="text-ink-soft max-w-2xl mx-auto" style={{ fontSize: "clamp(14px,1.4vw,17px)" }}>{group.caption}</p>
       {group.note && <HandNote>“{group.note}”</HandNote>}
     </div>
     {group.metrics && (
-      <div className="mt-6">
+      <div className="mt-6 text-center">
         <MetricsStrip metrics={group.metrics} />
       </div>
     )}
     {group.resultsBox && (
-      <div className="mt-8">
+      <div className="mt-8 text-center">
         <div
           className="inline-block px-10 py-10 md:px-16 md:py-12 text-center"
           style={{ border: "2px dotted var(--pink)", borderRadius: 2 }}
         >
-          <div className="section-number leading-none" style={{ fontSize: "clamp(56px,9vw,120px)" }}>
+          <div className="section-number leading-none" style={{ fontSize: "clamp(38px,6vw,76px)" }}>
             {group.resultsBox.main}
           </div>
           <div
@@ -74,7 +74,7 @@ export const CaseMorellis = () => {
         </div>
 
         <Reveal>
-          <div className="mb-20 max-w-[860px]">
+          <div className="mb-20 max-w-[860px] mx-auto">
             <ImageSlot label={d.hero.label} ratio={d.hero.ratio} src={d.hero.src} />
           </div>
         </Reveal>
@@ -84,7 +84,7 @@ export const CaseMorellis = () => {
             <div className="relative">
               {sec.num === "01" && <Coffee className="absolute right-2 -top-2 w-10 hidden md:block" />}
               {sec.num === "02" && <Heart className="absolute right-2 -top-2 w-9 hidden md:block" fill="var(--pink-soft)" />}
-              <SubHead num={sec.num} title={sec.title} />
+              <SubHead num={sec.num} title={sec.title} center />
             </div>
             {sec.groups.map((g, gi) => (
               <Group key={gi} group={g} />
@@ -93,25 +93,25 @@ export const CaseMorellis = () => {
         ))}
 
         {/* 03 Website & Poster */}
-        <SubHead num={d.website.num} title={d.website.title} />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8 max-w-[860px]">
+        <SubHead num={d.website.num} title={d.website.title} center />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8 max-w-[860px] mx-auto">
           <Reveal>
-            <h4 className="font-display text-ink mb-5" style={{ fontSize: "clamp(15px,1.6vw,20px)", fontWeight: 600 }}>{d.website.left.heading}</h4>
+            <h4 className="font-display text-ink mb-5 text-center" style={{ fontSize: "clamp(15px,1.6vw,20px)", fontWeight: 600 }}>{d.website.left.heading}</h4>
             <div className="flex flex-col gap-4 mb-5">
               {d.website.left.slots.map((s, i) => (
                 <ImageSlot key={i} label={s.label} ratio={s.ratio} src={s.src} />
               ))}
             </div>
-            <p className="text-ink-soft" style={{ fontSize: "clamp(14px,1.4vw,17px)" }}>{d.website.left.caption}</p>
+            <p className="text-ink-soft text-center" style={{ fontSize: "clamp(14px,1.4vw,17px)" }}>{d.website.left.caption}</p>
           </Reveal>
           <Reveal delay={0.08}>
-            <h4 className="font-display text-ink mb-5" style={{ fontSize: "clamp(15px,1.6vw,20px)", fontWeight: 600 }}>{d.website.right.heading}</h4>
+            <h4 className="font-display text-ink mb-5 text-center" style={{ fontSize: "clamp(15px,1.6vw,20px)", fontWeight: 600 }}>{d.website.right.heading}</h4>
             <div className="grid grid-cols-2 gap-4 mb-5">
               {d.website.right.slots.map((s, i) => (
                 <ImageSlot key={i} label={s.label} ratio={s.ratio} src={s.src} />
               ))}
             </div>
-            <p className="text-ink-soft" style={{ fontSize: "clamp(14px,1.4vw,17px)" }}>{d.website.right.caption}</p>
+            <p className="text-ink-soft text-center" style={{ fontSize: "clamp(14px,1.4vw,17px)" }}>{d.website.right.caption}</p>
           </Reveal>
         </div>
 

@@ -40,9 +40,9 @@ export const CaseHeader = ({ id, num, title, subtitle, meta, intro }) => (
 );
 
 // ── Sub-section label (e.g. 01 SOCIAL MEDIA CONTENT) ──────────
-export const SubHead = ({ num, title }) => (
+export const SubHead = ({ num, title, center }) => (
   <Reveal>
-    <div className="flex items-baseline gap-4 mb-8 pt-4" style={{ borderTop: "1px solid var(--line)" }}>
+    <div className={`flex items-baseline gap-4 mb-8 pt-4 ${center ? "justify-center text-center" : ""}`} style={{ borderTop: "1px solid var(--line)" }}>
       <span className="section-number" style={{ fontSize: "clamp(20px,2vw,30px)" }}>{num}</span>
       <h3 className="font-display uppercase text-ink" style={{ fontSize: "clamp(18px,2.4vw,32px)", fontWeight: 600, letterSpacing: "-0.01em" }}>
         {title}
