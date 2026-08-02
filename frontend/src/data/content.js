@@ -124,10 +124,10 @@ export const content = {
           {
             heading: "A) Organic Customer UGC",
             slots: [
-              { label: "Customer Story mention 1", ratio: "9/16" },
-              { label: "Customer Story mention 2", ratio: "9/16" },
-              { label: "Customer Story mention 3", ratio: "9/16" },
-              { label: "Customer Story mention 4", ratio: "9/16" },
+              { label: "Customer Story mention 1", ratio: "9/16", src: "/images/ugc-1.webp" },
+              { label: "Customer Story mention 2", ratio: "9/16", src: "/images/ugc-2.webp" },
+              { label: "Customer Story mention 3", ratio: "9/16", src: "/images/ugc-3.webp" },
+              { label: "Customer Story mention 4", ratio: "9/16", src: "/images/ugc-4.webp" },
             ],
             caption: "Monitored and amplified organic customer content featuring the brand.",
           },
