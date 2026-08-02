@@ -179,8 +179,8 @@ export const content = {
       left: {
         heading: "Website Updates & Maintenance",
         slots: [
-          { label: "Homepage", ratio: "16/9" },
-          { label: "Product page", ratio: "16/9" },
+          { label: "Homepage", ratio: "16/9", src: "/images/web-b.webp" },
+          { label: "Our Story page", ratio: "16/9", src: "/images/web-a.webp" },
         ],
         caption: "Updated product listings, prices, opening hours and promotional content on the brand website.",
       },
