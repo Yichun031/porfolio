@@ -163,10 +163,10 @@ export const content = {
           {
             heading: "D) Artist Collaboration",
             slots: [
-              { label: "Artist profile", ratio: "4/5" },
-              { label: "Morelli's artwork", ratio: "4/5" },
-              { label: "National Ice Cream Day Story", ratio: "4/5" },
-              { label: "Postcard / greeting card", ratio: "4/5" },
+              { label: "Artist profile", ratio: "4/5", src: "/images/art-1.webp" },
+              { label: "Morelli's artwork", ratio: "4/5", src: "/images/art-2.webp" },
+              { label: "National Ice Cream Day Story", ratio: "4/5", src: "/images/art-3.webp" },
+              { label: "Postcard / greeting card", ratio: "4/5", src: "/images/art-4.webp" },
             ],
             caption: "Adapted Morelli's-themed artwork for seasonal social content and branded postcard and greeting-card designs.",
           },
