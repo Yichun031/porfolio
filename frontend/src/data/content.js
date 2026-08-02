@@ -275,7 +275,7 @@ export const content = {
     subtitle: "MarCom & Social Media Campaigns",
     intro: "Supported three hotel campaigns from content preparation and brand review to multi-channel launch, KOL visits and coverage tracking.",
     keyVisuals: [
-      { label: "PuXuan × Guerlain 'Fang Yu' Afternoon Tea", ratio: "4/5", src: "/images/pxk-guerlain-key.png" },
+      { label: "PuXuan × Guerlain 'Fang Yu' Afternoon Tea", ratio: "4/5", src: "/images/pxk-guerlain-key2.png" },
       { label: "'Xuan Yue' Mid-Autumn Gift Box", ratio: "4/5", src: "/images/pxk-b.png" },
       { label: "2022 Christmas Season", ratio: "4/5", src: "/images/pxk-a.png" },
     ],
