@@ -19,7 +19,7 @@ const Group = ({ group }) => (
       </h4>
     </Reveal>
     <Reveal delay={0.05}>
-      <div className={`grid ${gridCols(group.slots.length)} gap-4 mb-5`}>
+      <div className={`grid ${gridCols(group.slots.length)} gap-4 mb-5 max-w-[860px]`}>
         {group.slots.map((s, i) => (
           <ImageSlot key={i} label={s.label} ratio={s.ratio} src={s.src} />
         ))}
@@ -73,9 +73,8 @@ export const CaseMorellis = () => {
           <CaseHeader id="morellis" num={d.num} title={d.title} subtitle={d.subtitle} intro={d.intro} />
         </div>
 
-        <div className="max-w-[896px] mx-auto">
         <Reveal>
-          <div className="mb-20">
+          <div className="mb-20 max-w-[860px]">
             <ImageSlot label={d.hero.label} ratio={d.hero.ratio} src={d.hero.src} />
           </div>
         </Reveal>
@@ -95,7 +94,7 @@ export const CaseMorellis = () => {
 
         {/* 03 Website & Poster */}
         <SubHead num={d.website.num} title={d.website.title} />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8 max-w-[860px]">
           <Reveal>
             <h4 className="font-display text-ink mb-5" style={{ fontSize: "clamp(15px,1.6vw,20px)", fontWeight: 600 }}>{d.website.left.heading}</h4>
             <div className="flex flex-col gap-4 mb-5">
@@ -120,7 +119,6 @@ export const CaseMorellis = () => {
         <MaskLine className="font-hand text-pink" >
           <span style={{ fontSize: "clamp(20px,2.4vw,32px)" }}>{d.closing}</span>
         </MaskLine>
-        </div>
       </div>
     </section>
   );

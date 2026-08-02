@@ -1,0 +1,48 @@
+{
+  "summary": "Frontend-only layout verification for Morelli's case width fix. Measured left x-coordinates and container widths across #morellis, #tesla, #puxuan at viewport 1440. All checks pass: sections share identical outer container (left=20, right=1420, width=1400px), case titles align (Morelli's x=109 vs Tesla x=112 vs PuXuan x=112 — within 3px), sub-headings and paragraphs extend full content width (right≈1380), while Morelli's IMAGE grids are constrained to max-w-[860px] and left-aligned (left=60, right=920). No horizontal overflow (scrollWidth=clientWidth=1440). Images render.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "measurements": {
+    "viewport_width": 1440,
+    "overflow": {"scrollWidth": 1440, "clientWidth": 1440},
+    "containers": {
+      "morellis": {"left": 20, "right": 1420, "width": 1400},
+      "tesla": {"left": 20, "right": 1420, "width": 1400},
+      "puxuan": {"left": 20, "right": 1420, "width": 1400}
+    },
+    "case_titles_left": {"MORELLI'S GELATO": 109, "TESLA": 112, "THE PUXUAN HOTEL": 112},
+    "morelli_subheads_left_right": [
+      {"text": "SOCIAL MEDIA CONTENT (h4 group)", "left": 108, "right": 459},
+      {"text": "A) Instagram Product Content (SubHead)", "left": 60, "right": 1380},
+      {"text": "B) Reactive Content (SubHead)", "left": 60, "right": 1380},
+      {"text": "C) TikTok (SubHead)", "left": 60, "right": 1380}
+    ],
+    "tesla_subheads_left_right": [
+      {"text": "REDNOTE KOS OPERATIONS (h4)", "left": 60, "right": 478},
+      {"text": "PRE-BROADCAST (SubHead)", "left": 60, "right": 378}
+    ],
+    "morelli_image_grids_max_w_860": [
+      {"left": 60, "right": 920, "width": 860},
+      {"left": 60, "right": 920, "width": 860},
+      {"left": 60, "right": 920, "width": 860},
+      {"left": 60, "right": 920, "width": 860},
+      {"left": 60, "right": 920, "width": 860},
+      {"left": 60, "right": 920, "width": 860}
+    ]
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Bug fix verified: max-w-[860px] applied to Group grid, hero image wrapper, and Website & Poster grid inside CaseMorellis.jsx. Outer container remains mx-auto max-w-[1400px] px-5 md:px-10 identical to CaseTesla/CasePuxuan. Headings/captions remain full width — matches user's requested behavior."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A", "frontend": "100%"},
+  "seed_data_creation": "none",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Layout verified at 1440 width with reduced-motion emulation. All 3 case sections share left=20/right=1420/width=1400 container. Morelli image grids are 860px wide left-aligned (right=920), while headings/captions extend to right=1380 like Tesla. No horizontal scroll. Case titles align within 3px."
+}
