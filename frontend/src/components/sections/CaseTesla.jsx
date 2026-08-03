@@ -1,8 +1,29 @@
 import React from "react";
 import { content } from "../../data/content";
 import { Reveal, PullQuote } from "../primitives";
-import { CaseHeader, SubHead, WorkflowChain, ChipRow, ArrowFlow, SupportedList } from "../CaseParts";
+import { CaseHeader, SubHead, WorkflowChain, ChipRow, ArrowFlow } from "../CaseParts";
 import { Car, Signal, Camera, TrendArrow, Wave } from "../Doodles";
+
+const MetricsStrip = ({ metrics }) => (
+  <Reveal>
+    <div className="mb-16 w-full max-w-2xl">
+      <div
+        className="grid grid-cols-1 min-[480px]:grid-cols-3"
+        style={{ border: "2px dashed var(--pink)", borderRadius: 2 }}
+      >
+        {metrics.map((m, i) => (
+          <div
+            key={m.label}
+            className={`text-center py-7 px-4 ${i > 0 ? "border-t min-[480px]:border-t-0 min-[480px]:border-l border-line" : ""}`}
+          >
+            <div className="section-number leading-none" style={{ fontSize: "clamp(34px,5vw,60px)" }}>{m.value}</div>
+            <div className="font-display uppercase text-ink-soft mt-2" style={{ fontSize: "11px", letterSpacing: "0.12em" }}>{m.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Reveal>
+);
 
 const StreamRow = ({ streams }) => (
   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
@@ -29,16 +50,17 @@ const PhaseTimeline = ({ phases }) => (
             </span>
             {i < phases.length - 1 && <Wave className="w-12 hidden md:block" />}
           </div>
-          <h4 className="font-display uppercase text-ink" style={{ fontSize: "clamp(14px,1.5vw,18px)", fontWeight: 600 }}>{p.title}</h4>
+          <h4 className="font-display uppercase text-ink" style={{ fontSize: "clamp(14px,1.5vw,18px)", fontWeight: 600 }}>{p.title || p.when}</h4>
           <p className="text-ink-soft mb-3" style={{ fontSize: "13px" }}>{p.sub}</p>
-          <ul className="flex flex-col gap-1.5">
-            {p.items.map((it) => (
-              <li key={it} className="text-ink flex gap-2" style={{ fontSize: "13.5px" }}>
-                <span className="text-pink">·</span>{it}
-              </li>
-            ))}
-          </ul>
-          <p className="text-ink-soft mt-3 italic" style={{ fontSize: "12.5px" }}>{p.caption}</p>
+          {p.items && (
+            <ul className="flex flex-col gap-1.5">
+              {p.items.map((it) => (
+                <li key={it} className="text-ink flex gap-2" style={{ fontSize: "13.5px" }}>
+                  <span className="text-pink">·</span>{it}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </Reveal>
     ))}
@@ -55,6 +77,8 @@ export const CaseTesla = () => {
           <CaseHeader id="tesla" num={d.num} title={d.title} subtitle={d.subtitle} intro={d.intro} />
         </div>
 
+        <MetricsStrip metrics={d.metrics} />
+
         <StreamRow streams={d.streams} />
 
         {/* 01 KOS */}
@@ -68,7 +92,7 @@ export const CaseTesla = () => {
         <div className="mb-12">
           <WorkflowChain steps={d.kos.workflow} />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10 mb-12">
           {d.kos.blocks.map((b, i) => (
             <Reveal key={b.title} delay={i * 0.05}>
               <div className="pt-4" style={{ borderTop: "1px solid var(--line)" }}>
@@ -93,14 +117,8 @@ export const CaseTesla = () => {
           <p className="font-hand text-pink mb-8" style={{ fontSize: "clamp(18px,2vw,26px)" }}>{d.live.strap}</p>
         </Reveal>
         <PhaseTimeline phases={d.live.phases} />
-        <div className="mb-14">
-          <PullQuote>{d.live.pullquote}</PullQuote>
-        </div>
-        <div className="mb-14">
-          <ArrowFlow title={d.live.signal.title} steps={d.live.signal.steps} caption={d.live.signal.caption} />
-        </div>
         <div className="mb-20">
-          <SupportedList items={d.live.supported} />
+          <ArrowFlow title={d.live.signal.title} steps={d.live.signal.steps} caption={d.live.signal.caption} />
         </div>
 
         {/* 03 Offline Event */}
@@ -115,13 +133,7 @@ export const CaseTesla = () => {
           <p className="text-ink max-w-3xl mb-10" style={{ fontSize: "clamp(15px,1.5vw,18px)" }}>{d.event.intro}</p>
         </Reveal>
         <PhaseTimeline phases={d.event.timeline} />
-        <div className="mb-14">
-          <PullQuote>{d.event.pullquote}</PullQuote>
-        </div>
-        <div className="mb-14">
-          <ArrowFlow title={d.event.signal.title} steps={d.event.signal.steps} caption={d.event.signal.caption} />
-        </div>
-        <SupportedList items={d.event.supported} />
+        <PullQuote>{d.event.pullquote}</PullQuote>
       </div>
     </section>
   );

@@ -204,6 +204,11 @@ export const content = {
     subtitle: "Social Media Operations",
     intro:
       "Supported Tesla's social media operations across Rednote KOS management, Douyin livestreaming and offline event content production.",
+    metrics: [
+      { value: "~10", label: "KOS Accounts" },
+      { value: "3", label: "Workstreams" },
+      { value: "5", label: "Months" },
+    ],
     streams: [
       { num: "01", title: "Rednote KOS Operations", body: "Managed content and performance across multiple KOS accounts, covering content review, topic planning, account diagnosis and reporting." },
       { num: "02", title: "Douyin Livestream Operations", body: "Supported livestream preparation, compliance, technical setup, central control and post-stream reporting." },
@@ -214,15 +219,12 @@ export const content = {
       title: "Rednote KOS Operations",
       strap: "Helping frontline teams create consistent, compliant and conversion-focused content.",
       context:
-        "KOS (Key Opinion Sales) were sales and delivery specialists who used their personal Rednote accounts to share delivery stories, answer customer questions and generate leads. I worked as the content operations hub — reviewing performance, ensuring compliance, building weekly topic templates and helping underperforming accounts improve.",
+        "KOS (Key Opinion Sales) were sales and delivery specialists who used their personal Rednote accounts to share delivery stories, answer customer questions and generate leads. I worked as the content operations hub for a programme of around ten accounts — reviewing performance, ensuring compliance, building weekly topic templates and helping underperforming accounts improve.",
       workflow: ["Dashboard", "Content Review", "Topic Bank", "Video Production", "Account Diagnosis", "Daily Report"],
       blocks: [
         { title: "Performance Dashboard", body: "Exported data from the Rednote business backend and consolidated it in spreadsheets, tracking post volume, impressions, engagement, saves, DMs and leads. Rather than relying on overall averages, I identified accounts with high content output but limited results, as well as low-volume accounts with strong conversion potential." },
         { title: "Content Review", body: "Reviewed KOS content before publication, focusing on pricing, performance and promise claims, and provided directly usable revisions when compliance or messaging issues were identified." },
-        { title: "Weekly Topic Bank", body: "Turned frequently asked customer questions into weekly content templates that sales and delivery teams could use directly.", diagram: ["Hook", "Structure", "Reference", "Cover"] },
-        { title: "Video Editing & Publishing", body: "Edited vertical videos from delivery and event footage and adapted content for WeChat Channels distribution." },
-        { title: "Account Diagnosis", body: "Diagnosed underperforming KOS accounts and provided practical content recommendations for testing and improvement." },
-        { title: "Daily Reporting", body: "Produced action-focused daily reports covering performance findings, possible causes, actions taken and the next review point.", diagram: ["Finding", "Cause", "Action", "Review Point"] },
+        { title: "Weekly Topic Bank", body: "Turned frequently asked customer questions into weekly content templates that sales and delivery teams could use directly, supporting a cycle of roughly twenty posts a week across the programme.", diagram: ["Hook", "Structure", "Reference", "Cover"] },
       ],
       pullquote: "High output with no results usually indicates a content problem, not an effort problem.",
     },
@@ -231,12 +233,11 @@ export const content = {
       title: "Douyin Livestream Operations",
       strap: "A closed-loop workflow from pre-broadcast preparation to performance review and continuous improvement.",
       phases: [
-        { num: "01", title: "Pre-broadcast", sub: "Compliance, content and technical preparation", items: ["Livestream qualification and creator filing confirmation", "Script pre-review and banned-word checks", "Host cue cards and run sheet preparation", "Streaming, lighting, camera and equipment testing", "Pre-live promotional video published"], caption: "Script review, compliance checks, livestream setup and pre-live promotion." },
-        { num: "02", title: "During", sub: "Central control and on-site support", items: ["Central-control operation", "Supporting the host through the run sheet", "Monitoring equipment and stream status", "Handling issues as they arose", "Logging frequent audience questions and key content moments"], caption: "Central-control support, livestream coordination and real-time issue handling." },
-        { num: "03", title: "Post-broadcast", sub: "Performance review and content repurposing", items: ["Exporting and organising livestream data", "Comparing leads and results against targets", "Reviewing segment-by-segment performance", "Clipping delivery moments and owner reactions", "Producing reports and improvement recommendations"], caption: "Performance analysis, highlight clipping and post-stream reporting." },
-        { num: "04", title: "Next Session", sub: "Findings feed the next livestream plan", items: ["Adjusting the next run sheet", "Refining the opening segment", "Reworking lower-performing content blocks", "Keeping the delivery stories and reactions that held attention", "Adding frequent questions to the next cue card"], caption: "Insights from each review informed the next script, run sheet and content plan." },
+        { num: "01", title: "Pre-broadcast", sub: "Compliance, content and technical preparation", items: ["Script pre-review and banned-word checks", "Host cue cards and run sheet preparation", "Streaming, lighting and equipment testing"] },
+        { num: "02", title: "During", sub: "Central control and on-site support", items: ["Central-control operation", "Supporting the host through the run sheet", "Logging frequent audience questions and key content moments"] },
+        { num: "03", title: "Post-broadcast", sub: "Performance review and content repurposing", items: ["Comparing leads and results against targets", "Reviewing segment-by-segment performance", "Clipping delivery moments and owner reactions"] },
+        { num: "04", title: "Next Session", sub: "Findings feed the next livestream plan", items: ["Adjusting the next run sheet", "Reworking lower-performing content blocks", "Adding frequent questions to the next cue card"] },
       ],
-      pullquote: "A closed loop, not a one-off. What we learned from each livestream shaped the next run sheet.",
       signal: {
         title: "Live Signal → Content Improvement",
         steps: [
@@ -246,26 +247,19 @@ export const content = {
         ],
         caption: "Audience behaviour showed us what to keep, what to improve and what to test next.",
       },
-      supported: ["Script preparation and compliance review", "Pre-live promotional video publishing", "Streaming tests and livestream-room setup", "Central-control and on-site support", "Performance reporting and highlight clipping"],
     },
     event: {
       num: "03",
       title: "Offline Event Operations",
       strap: "From event planning and on-site delivery to same-day social content production.",
-      intro: "Supported Tesla's offline event setup and operations, with a focus on visitor-flow design, filming-point planning, on-site shooting and same-day content production.",
+      intro: "Supported Tesla offline events with a focus on visitor-flow design, filming-point planning, on-site shooting and same-day content production.",
       timeline: [
-        { num: "01", when: "T-14 to T-7 — Planning", sub: "Objectives, venue and production requirements", items: ["Defining event objectives and target audience", "Venue survey", "Confirming space, equipment and on-site constraints", "Setting the materials and content production schedule"], caption: "Defined event requirements and assessed the venue, production needs and delivery schedule." },
-        { num: "02", when: "T-7 to T-1 — Experience & Content Design", sub: "Designing the space for both visitors and content production", items: ["Visitor-flow design", "Planning check-in, experience and activity zones", "Setting filming points in advance", "Confirming on-site staffing and contingency plans", "Tracking materials and build progress"], caption: "Planned visitor flow, filming positions and on-site arrangements to support both the guest experience and content capture." },
-        { num: "03", when: "T-0 — Event-day Operations", sub: "On-site setup, coordination and shooting", items: ["Supporting build and inspection", "Maintaining visitor flow and on-site order", "Coordinating between activity segments", "Shooting guests, vehicles and event footage", "Handling changes as they happened"], caption: "Supported on-site setup and event delivery while capturing key moments for social content." },
-        { num: "04", when: "T-0 to T+1 — Content Delivery & Review", sub: "Turning event footage into timely social content", items: ["Selecting and organising footage", "Editing event short-form video", "Same-day content published", "Archiving assets and reviewing the event"], caption: "Turned event footage into same-day social content and organised assets for future use." },
+        { num: "01", when: "T-14 to T-7 — Planning", sub: "Objectives, venue survey and production schedule" },
+        { num: "02", when: "T-7 to T-1 — Experience & Content Design", sub: "Visitor flow, filming points and on-site arrangements" },
+        { num: "03", when: "T-0 — Event-day Operations", sub: "On-site setup, coordination and shooting" },
+        { num: "04", when: "T-0 to T+1 — Content Delivery & Review", sub: "Same-day social content and asset archiving" },
       ],
       pullquote: "The event was designed not only for the people attending, but also for the audience who would experience it through social media.",
-      signal: {
-        title: "Event Space → Content Output",
-        steps: ["Visitor Flow & Experience", "Filming Points & Content Capture", "Same-day Social Content"],
-        caption: "Planning the filming points in advance made content production faster and reduced disruption during the event.",
-      },
-      supported: ["Venue and event setup planning", "Visitor-flow and filming-point design", "Materials and schedule coordination", "On-site shooting and event support", "Same-day content production"],
     },
   },
 
