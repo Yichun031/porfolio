@@ -2,7 +2,7 @@ import React from "react";
 import { content } from "../../data/content";
 import { Reveal, PullQuote } from "../primitives";
 import { CaseHeader, SubHead } from "../CaseParts";
-import { Car, Signal, Camera, TrendArrow, Wave, CurvedArrow } from "../Doodles";
+import { Car, Signal, Camera, TrendArrow, Wave } from "../Doodles";
 
 // Keyword chips: pill, 1px grey border, no fill, small dark text, 8px gaps, wraps
 const Chips = ({ items }) => (
@@ -135,29 +135,6 @@ export const CaseTesla = () => {
             </Reveal>
           ))}
         </div>
-
-        {/* Live signal diagram */}
-        <Reveal>
-          <div className="mb-20">
-            <h4 className="font-display uppercase text-ink mb-6" style={{ fontSize: "clamp(14px,1.5vw,18px)", letterSpacing: "0.06em" }}>{d.live.signal.title}</h4>
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-4">
-              {d.live.signal.steps.map((s, i) => (
-                <React.Fragment key={s.title}>
-                  <div className="p-5 h-full" style={{ border: "1.5px solid var(--line)", borderRadius: 2 }}>
-                    <p className="font-display text-ink mb-3" style={{ fontSize: "clamp(13px,1.3vw,16px)", fontWeight: 600 }}>{s.title}</p>
-                    <Chips items={s.chips} />
-                  </div>
-                  {i < d.live.signal.steps.length - 1 && (
-                    <div className="flex justify-center md:rotate-0 rotate-90">
-                      <CurvedArrow className="w-10" />
-                    </div>
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
-            <p className="text-ink-soft mt-5 max-w-2xl" style={{ fontSize: "14px" }}>{d.live.signal.caption}</p>
-          </div>
-        </Reveal>
 
         {/* 03 Offline Event */}
         <div className="relative">
