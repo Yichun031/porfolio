@@ -218,10 +218,14 @@ export const content = {
       num: "01",
       title: "Rednote KOS Operations",
       strap: "Helping frontline teams create consistent, compliant and conversion-focused content.",
-      context:
-        "KOS were sales and delivery specialists posting from their own Rednote accounts. I ran the content operations hub for around ten of them — performance review, compliance checks, weekly topic templates, and diagnosis for accounts that weren't converting.",
-      workflow: ["Dashboard", "Content Review", "Topic Bank", "Video Production", "Account Diagnosis", "Daily Report"],
-      tracked: ["posts", "impressions", "engagement", "saves", "DMs", "leads"],
+      steps: [
+        { num: "01", name: "Dashboard", figure: "~10 accounts", desc: "Consolidated Rednote backend data for the whole programme into one weekly view.", chips: ["posts", "impressions", "engagement", "saves", "DMs", "leads"] },
+        { num: "02", name: "Content Review", figure: "~20/week", desc: "Checked every post before publication for pricing, performance and promise claims." },
+        { num: "03", name: "Topic Bank", figure: "5–6/week", desc: "Turned recurring customer questions into templates the team could use directly." },
+        { num: "04", name: "Video Production", figure: "~15/week", desc: "Cut delivery and event footage into vertical video for publishing." },
+        { num: "05", name: "Account Diagnosis", figure: "3 patterns", desc: "Sorted accounts by output against conversion, then changed direction for each type." },
+        { num: "06", name: "Daily Report", figure: "daily", desc: "Finding, cause, action, next review point." },
+      ],
       pullquote: "High output with no results usually indicates a content problem, not an effort problem.",
     },
     live: {

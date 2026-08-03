@@ -1,7 +1,7 @@
 import React from "react";
 import { content } from "../../data/content";
 import { Reveal, PullQuote } from "../primitives";
-import { CaseHeader, SubHead, WorkflowChain } from "../CaseParts";
+import { CaseHeader, SubHead } from "../CaseParts";
 import { Car, Signal, Camera, TrendArrow, Wave, CurvedArrow } from "../Doodles";
 
 // Keyword chips: pill, 1px grey border, no fill, small dark text, 8px gaps, wraps
@@ -69,20 +69,40 @@ export const CaseTesla = () => {
         {/* 01 KOS */}
         <SubHead num={d.kos.num} title={d.kos.title} />
         <Reveal>
-          <p className="font-hand text-pink mb-6" style={{ fontSize: "clamp(18px,2vw,26px)" }}>{d.kos.strap}</p>
+          <p className="font-hand text-pink mb-8" style={{ fontSize: "clamp(18px,2vw,26px)" }}>{d.kos.strap}</p>
         </Reveal>
-        <Reveal delay={0.05}>
-          <p className="text-ink max-w-3xl mb-8" style={{ fontSize: "clamp(15px,1.5vw,18px)", lineHeight: 1.65 }}>{d.kos.context}</p>
-        </Reveal>
-        <div className="mb-8">
-          <WorkflowChain steps={d.kos.workflow} />
+        <div className="mb-20">
+          {d.kos.steps.map((s, i) => (
+            <Reveal key={s.num} delay={i * 0.04}>
+              <div
+                className="grid grid-cols-[44px_1fr] md:grid-cols-[64px_260px_1fr] gap-x-6 gap-y-2 py-6"
+                style={{ borderTop: "1px solid var(--line)" }}
+              >
+                <span className="section-number" style={{ fontSize: "clamp(18px,1.8vw,24px)" }}>{s.num}</span>
+                <div>
+                  <div className="font-display text-ink" style={{ fontSize: "clamp(15px,1.5vw,19px)", fontWeight: 600 }}>{s.name}</div>
+                  <div className="font-display text-pink mt-1" style={{ fontSize: "13px", fontWeight: 500 }}>{s.figure}</div>
+                </div>
+                <div className="col-span-2 md:col-span-1">
+                  <p className="text-ink-soft" style={{ fontSize: "clamp(14px,1.4vw,17px)", lineHeight: 1.6 }}>{s.desc}</p>
+                  {s.chips && (
+                    <div className="flex flex-wrap mt-3" style={{ gap: "7px" }}>
+                      {s.chips.map((c) => (
+                        <span
+                          key={c}
+                          className="font-body text-ink-soft"
+                          style={{ border: "1px solid var(--line)", borderRadius: 999, padding: "5px 14px", fontSize: "12.5px", lineHeight: 1.2 }}
+                        >
+                          {c}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </Reveal>
+          ))}
         </div>
-        <Reveal>
-          <div className="mb-12">
-            <p className="font-display uppercase text-ink-soft mb-3" style={{ fontSize: "11px", letterSpacing: "0.12em" }}>Tracked</p>
-            <Chips items={d.kos.tracked} />
-          </div>
-        </Reveal>
         <div className="mb-20 relative">
           <TrendArrow className="w-16 mb-4" />
           <PullQuote>{d.kos.pullquote}</PullQuote>
