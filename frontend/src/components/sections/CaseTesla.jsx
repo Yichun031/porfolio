@@ -19,22 +19,18 @@ const Chips = ({ items }) => (
   </div>
 );
 
-const MetricsStrip = ({ metrics }) => (
-  <Reveal>
-    <div className="mb-16 w-full max-w-2xl">
-      <div className="grid grid-cols-1 min-[480px]:grid-cols-3" style={{ border: "2px dashed var(--pink)", borderRadius: 2 }}>
-        {metrics.map((m, i) => (
-          <div
-            key={m.label}
-            className={`text-center py-7 px-4 ${i > 0 ? "border-t min-[480px]:border-t-0 min-[480px]:border-l border-line" : ""}`}
-          >
-            <div className="section-number leading-none" style={{ fontSize: "clamp(34px,5vw,60px)" }}>{m.value}</div>
-            <div className="font-display uppercase text-ink-soft mt-2" style={{ fontSize: "11px", letterSpacing: "0.12em" }}>{m.label}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </Reveal>
+const StreamRow = ({ streams }) => (
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+    {streams.map((s, i) => (
+      <Reveal key={s.num} delay={i * 0.08}>
+        <div className="pt-5" style={{ borderTop: "2px solid var(--ink)" }}>
+          <span className="section-number block mb-3" style={{ fontSize: "clamp(28px,3vw,42px)" }}>{s.num}</span>
+          <h4 className="font-display uppercase text-ink mb-3" style={{ fontSize: "clamp(15px,1.6vw,20px)", fontWeight: 600 }}>{s.title}</h4>
+          <p className="text-ink-soft" style={{ fontSize: "clamp(14px,1.4vw,17px)" }}>{s.body}</p>
+        </div>
+      </Reveal>
+    ))}
+  </div>
 );
 
 // Four-column structure with numbered pink circles + wavy connectors
@@ -68,7 +64,7 @@ export const CaseTesla = () => {
           <CaseHeader id="tesla" num={d.num} title={d.title} subtitle={d.subtitle} intro={d.intro} />
         </div>
 
-        <MetricsStrip metrics={d.metrics} />
+        <StreamRow streams={d.streams} />
 
         {/* 01 KOS */}
         <SubHead num={d.kos.num} title={d.kos.title} />

@@ -203,7 +203,12 @@ export const content = {
     title: "Tesla",
     subtitle: "Social Media Operations",
     intro:
-      "Rednote KOS management, Douyin livestreaming and offline event content production.",
+      "Supported Tesla's social media operations across Rednote KOS management, Douyin livestreaming and offline event content production.",
+    streams: [
+      { num: "01", title: "Rednote KOS Operations", body: "Managed content and performance across multiple KOS accounts, covering content review, topic planning, account diagnosis and reporting." },
+      { num: "02", title: "Douyin Livestream Operations", body: "Supported livestream preparation, compliance, technical setup, central control and post-stream reporting." },
+      { num: "03", title: "Offline Event Operations", body: "Supported event setup, visitor-flow and filming-point design, on-site shooting and same-day content production." },
+    ],
     metrics: [
       { value: "~10", label: "KOS Accounts" },
       { value: "3", label: "Workstreams" },
