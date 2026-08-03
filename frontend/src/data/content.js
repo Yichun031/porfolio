@@ -232,11 +232,12 @@ export const content = {
       num: "02",
       title: "Douyin Livestream Operations",
       strap: "A closed-loop workflow from pre-broadcast preparation to performance review.",
+      cadence: "2 Livestreams / Month",
       phases: [
-        { num: "01", title: "Pre-broadcast", chips: ["script review", "banned words", "cue cards", "equipment test", "promo video"] },
-        { num: "02", title: "During", chips: ["central control", "host support", "issue handling", "question logging"] },
-        { num: "03", title: "Post-broadcast", chips: ["data export", "leads vs target", "segment review", "highlight clipping"] },
-        { num: "04", title: "Next Session", chips: ["run sheet update", "content rework", "cue card additions"] },
+        { num: "01", title: "Pre-broadcast", figure: "2h prep", chips: ["script review", "banned words", "cue cards", "equipment test", "promo video"] },
+        { num: "02", title: "During", figure: "2–3h live", chips: ["central control", "host support", "issue handling", "question logging"] },
+        { num: "03", title: "Post-broadcast", figure: "~8 clips", chips: ["data export", "leads vs target", "segment review", "highlight clipping"] },
+        { num: "04", title: "Next Session", figure: "monthly cycle", chips: ["run sheet update", "content rework", "cue card additions"] },
       ],
       signal: {
         title: "Live Signal → Content Improvement",

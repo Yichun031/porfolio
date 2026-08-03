@@ -114,9 +114,27 @@ export const CaseTesla = () => {
           <SubHead num={d.live.num} title={d.live.title} />
         </div>
         <Reveal>
-          <p className="font-hand text-pink mb-8" style={{ fontSize: "clamp(18px,2vw,26px)" }}>{d.live.strap}</p>
+          <p className="font-hand text-pink mb-2" style={{ fontSize: "clamp(18px,2vw,26px)" }}>{d.live.strap}</p>
         </Reveal>
-        <NumberColumns items={d.live.phases} />
+        <Reveal delay={0.04}>
+          <p className="font-display text-pink mb-8 uppercase" style={{ fontSize: "11.5px", letterSpacing: "0.14em", fontWeight: 500 }}>{d.live.cadence}</p>
+        </Reveal>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 mb-14">
+          {d.live.phases.map((p, i) => (
+            <Reveal key={p.num} delay={i * 0.07}>
+              <div>
+                <div className="flex items-center gap-3">
+                  <span className="flex items-center justify-center rounded-full font-display font-bold text-white shrink-0" style={{ width: 42, height: 42, backgroundColor: "var(--pink)", fontSize: 15 }}>
+                    {p.num}
+                  </span>
+                  <h4 className="font-display uppercase text-ink" style={{ fontSize: "clamp(14px,1.5vw,18px)", fontWeight: 600 }}>{p.title}</h4>
+                </div>
+                <div className="font-display text-pink mb-4 mt-1" style={{ fontSize: "13px", fontWeight: 500, paddingLeft: 54 }}>{p.figure}</div>
+                <Chips items={p.chips} />
+              </div>
+            </Reveal>
+          ))}
+        </div>
 
         {/* Live signal diagram */}
         <Reveal>
