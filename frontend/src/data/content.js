@@ -291,7 +291,7 @@ export const content = {
         { outlet: "Jiemian News", headline: "PuXuan Hotel and Guerlain launch “Fang Yu” afternoon tea", date: "", url: "https://www.jiemian.com/article/7861293.html", ratio: "16/9", src: "/images/coverage-1.png" },
         { outlet: "MICE China", headline: "PuXuan Hotel partners with Guerlain on “Fang Yu” afternoon tea", date: "27 Jul 2022", url: "https://www.micecn.com/articles/show/7849", ratio: "16/9", src: "/images/coverage-mice.png" },
         { outlet: "Sohu", headline: "Beijing hotel co-branded afternoon tea round-up", date: "15 Aug 2022", url: "https://www.sohu.com/a/576882183_121119040", ratio: "16/9", src: "/images/coverage-sohu.png" },
-        { outlet: "Jiemian News", headline: "Luxury hotels launch Mid-Autumn mooncake gift boxes", date: "22 Aug 2022", url: "https://www.jiemian.com/article/7947399.html", ratio: "16/9" },
+        { outlet: "Jiemian News", headline: "Luxury hotels launch Mid-Autumn mooncake gift boxes", date: "22 Aug 2022", url: "https://www.jiemian.com/article/7947399.html", ratio: "16/9", src: "/images/coverage-mooncake.png" },
       ],
       result: "Contributed to the PuXuan × Guerlain campaign that generated coverage across Jiemian, MICE, Sohu and other lifestyle and industry media.",
     },
